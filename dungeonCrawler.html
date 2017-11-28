@@ -220,10 +220,54 @@ function createEvent(){
 }
 
 //This is the floor constructor
-function Floor(characterLevel){
-
-	var roomArray = [[], [], [], [], [], [], [], [], [], [], []];
-
+function Floor(characterLevel)
+{
+	var map = new Array(11);
+   	for(int x = 0; x < 11; x++)
+   	{
+      		map[x] = new Array(11); //makes a 2d array
+		
+   	}//2d map array creation loop
+   	map[5][5] = 
+   	{
+      		roomType: "start",
+      		neighbor: 0,
+      		doorN: false, doorS: false, doorW: false, doorE: false,
+		resolveNeighbor: function(int neighbor)
+		{
+			var fourCase = Math.floor((Math.random() * 4) + 1);
+			var sixCase =  Math.floor((Math.random() * 6) + 1);
+			switch(neighbor)
+			{
+				case 1:
+					if(fourCase = 1)
+						this.doorN = true;
+			 		else if(fourCase = 2)
+						this.doorE = true;
+					else if(fourCase = 3)
+						this.doorS = true;
+					else if(fourCase = 4)
+						this.doorW = true;
+					break;
+				case 2:
+					if(sixCase = 1)
+					{
+						this.doorN = true:
+					}
+			}
+			
+		}
+   	}//starting room properties
+	map[5][5].neighbor = Math.floor((Math.random() * 4) + 1);
+	map[5][5].resolveNeighbor
+   	var totalRoom = (charLv * floorLv)/Math.abs(floorLv-charLv) + 5;
+   	var currentRoom = 0;
+	var trackX = 5;
+	var trackY = 5;
+   	while (currentRoom < totalRoom)
+	{
+		
+	}
 	//populate rooms
 
 }
